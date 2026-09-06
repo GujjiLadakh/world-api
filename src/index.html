@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldAPI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
+</head>
+<body>
+<header>
+    <h1>WorldAPI</h1>
+    <h2>Making the world accessible</h2>
+</header>
+<main>
+<section>
+   <p>The WorldAPI is simple. Enter a country and information about said country will be displayed.</p>
+    <p>Enter a country below.</p>
+</section>
+<form class="country-form">
+    <label for="country-name"></label>
+    <input type="text" id="country-name" class="country-input" name="country-name" accesskey="/" placeholder="e.g. India, Spain, UK">
+    <button type="button" class="country-submit" id="lookup-btn">Lookup</button>
+</form>
+    <p class="information random-country-text">Or, click below for a random country.</p>
+    <div class="random-btn-wrapper">
+        <button type="button" class="random-country country-submit" id="random-country-btn">Random Country</button>
+    </div>
+<div id="error-msg"></div>
+<section id="country-card">
+    <div class="info-grid">
+        <p id="name" data-label="Name"></p>
+        <p id="capital" data-label="Capital City"></p>
+        <p id="continent" data-label="Continent"></p>
+        <p id="population" data-label="Population (2026)"></p>
+        <p id="language" data-label="National Language"></p>
+        <p id="total-area" data-label="Total Area"></p>
+        <p id="currency" data-label="Currency"></p>
+    </div>
+    <div id="map"></div>
+</section>
+<section class="information">
+    <p>If you cannot find the country you are looking for, please check your spelling.</p>
+    <p>If your spelling is correct, then what you typed in may not be considered a country. Below are a list of places that the WorldAPI does not recognise as a country:</p>
+    <p class="country-list">Palestine, Western Sahara, Somaliland</p>
+    <p>If there is still an error, open an issue on GitHub. I will do my best to address it.</p>
+</section>
+</main>
+<footer>
+    <p>© WorldAPI 2026-</p>
+    <p>Copyright of Gujji Ladakh</p>
+</footer>
+<script src="script.js" defer></script>
+</body>
+</html>
